@@ -1,0 +1,29 @@
+#portfolio {
+    font-family: "Montserrat", sans-serif;
+    padding: $pd-9 0;
+    position: relative;
+    .portfolio__bg__top {
+        @include styleBackgroundAbs;
+        top: 0;
+        left: 0;
+    }
+    .portfolio__bg__bottom {
+        @include styleBackgroundAbs;
+        bottom: 0;
+        left: 0;
+    }
+    .container {
+        align-items: center;
+        p {
+            @include styleText($color-dark-2, $fs-5, $fw-4);
+            margin-bottom: $mg-2;
+        }
+        h1 {
+            @include styleText($color-dark-3, $fs-7, $fw-5);
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

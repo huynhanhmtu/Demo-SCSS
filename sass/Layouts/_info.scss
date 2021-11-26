@@ -1,0 +1,45 @@
+#info {
+    font-family: "Montserrat", sans-serif;
+    padding-top: $pd-10;
+    background-color: $color-light-2;
+    text-align: center;
+    position: relative;
+    .info__content {
+        padding: 0;
+    }
+    .info__bg {
+        padding: 0 $pd-12;
+    }
+    .info__card {
+        padding: 0;
+        border-radius: $bd-radius-1;
+    }
+    .card-body {
+        padding: 0 $pd-5;
+        margin-bottom: $mg-8;
+        margin-top: $mg-7;
+        span {
+            @include styleText($color-dark-2, $fs-1, $fw-4);
+            margin-bottom: $mg-3;
+        }
+    }
+    .card-title {
+        @include styleText($color-dark-1, $fs-6, $fw-5);
+        margin-bottom: $mg-9;
+    }
+    .card-text {
+        @include styleText($color-dark-1, $fs-8, $fw-2);
+        font-family: "Roboto", sans-serif;
+        line-height: $lh-1;
+    }
+    .info__wrapper {
+        width: 100%;
+        height: $height-4;
+    }
+    .info__bg__bottom {
+        @include styleBackgroundAbs;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+    }
+}
