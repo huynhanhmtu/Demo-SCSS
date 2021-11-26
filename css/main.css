@@ -15,6 +15,7 @@ body {
 }
 
 .col-3,
+.col-4,
 .col-6 {
   padding: 0;
 }
@@ -215,6 +216,20 @@ body {
 
 #course {
   font-family: "Montserrat", sans-serif;
-  padding-top: 60px;
+  padding-top: 120px;
+}
+
+#course img {
+  max-width: 100%;
+  height: auto;
+}
+
+#course .container {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#course form {
+  text-align: left;
 }
 /*# sourceMappingURL=main.css.map */
