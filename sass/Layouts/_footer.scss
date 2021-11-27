@@ -1,0 +1,89 @@
+#footer {
+    background-color: $color-dark-4;
+    color: $color-light-1;
+    padding: $pd-13 0;
+    position: relative;
+    .footer__bg__bottom {
+        @include styleBackgroundAbs;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+    .footer__item {
+        margin-bottom: $mg-12;
+        padding: 0 $mg-10;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+    ul {
+        list-style-type: none;
+        li {
+            font-size: $fs-2;
+            line-height: $lh-3;
+            border-bottom: $bd-1 solid $color-trans-2;
+            padding: $pd-15 0;
+            &:first-of-type {
+                padding: 0 0 $pd-15;
+            }
+        }
+    }
+    h3 {
+        margin-bottom: $mg-13;
+        font-family: "Montserrat", sans-serif;
+        @include styleText(inherit, $fs-6, $fw-5);
+    }
+    p {
+        margin-bottom: $mg-4;
+        font-size: $fs-2;
+        line-height: $lh-4;
+        i {
+            padding-right: $pd-1;
+        }
+    }
+    span {
+        display: inline-block;
+        margin-top: $mg-4;
+        font-size: $fs-2;
+        i {
+            padding-right: $pd-3;
+            &:hover{
+                cursor: pointer;
+                color: $color-dark-1;
+            }
+        }
+    }
+    button {
+        font-family: "Montserrat", sans-serif;
+        font-size: $fs-11;
+        width: 100%;
+        height: $height-7;
+        border: $bd-1 solid $color-trans-3;
+        border-radius: $bd-radius-2;
+        font-weight: $fw-4;
+        transition: all 0.3s;
+        &:hover{
+            @include styleBtnHover($color-light-1,transparent,$bd-1,$color-light-1);
+        }
+    }
+    input{
+        @extend button;
+        font-weight: $fw-2;
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: $mg-3;
+        text-align: center;
+        background-color: transparent;
+        outline: 0 solid $color-light-1;
+        transition: border 0.3s;
+        &::placeholder{
+            color: $color-light-1; 
+        }
+        &:focus{
+            border: 1px solid $color-light-1;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@mixin styleBtnHover($color,$background,$bd,$bd-color) {
+    color: $color;
+    background: $background;
+    border: $bd solid $bd-color;
+}

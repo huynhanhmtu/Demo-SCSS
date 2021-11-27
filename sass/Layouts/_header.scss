@@ -4,6 +4,13 @@
     left: 0;
     right: 0;
     z-index: 2;
+    button{
+        font-size: $fs-6;
+        transition: all 0.1s;
+        &:hover{
+            font-size: $fs-6+0.2rem;
+        }
+    }
     .header__navbar {
         justify-content: space-between;
         align-items: center;
@@ -11,12 +18,17 @@
             padding: 0;
             li {
                 padding-right: $pd-8;
+                &:hover {
+                    a {
+                        color: $color-dark-2;
+                    }
+                }
             }
         }
     }
     img {
-        width: auto;
-        height: $height-3;
+        width: $height-3;
+        height: auto;
     }
     a {
         @include styleText($color-dark-1, $fs-9, $fw-4);
@@ -38,11 +50,18 @@
                 background: transparent;
                 border-radius: $bd-radius-2;
                 transition: all 300ms ease;
+                &:hover {
+                    color: $color-dark-2;
+                    box-shadow: 0 0 0 $bd-1 $color-dark-2 inset;
+                }
             }
         }
         .header__icon {
             a {
                 margin-left: $mg-4;
+                &:hover {
+                    color: $color-dark-2;
+                }
             }
         }
     }

@@ -1,16 +1,100 @@
 #course {
     font-family: "Montserrat", sans-serif;
     padding-top: $pd-13;
-    img {
-        max-width: 100%;
-        height: auto;
+    padding-bottom: $pd-10;
+    position: relative;
+    .course__bg__bottom {
+        @include styleBackgroundAbs;
+        left: 0;
+        bottom: 0;
+    }
+    .course__left {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
     .container {
         justify-content: space-around;
-    }
-    .course__right {
-        text-align: center;
-        box-shadow: 0 30px 30px -10px rgb(0 0 0 / 20%);
-        border-radius: $bd-radius-1;
+        .course__right {
+            text-align: left;
+            form {
+                box-shadow: 0 30px 30px -10px $color-trans-1;
+                border-radius: $bd-radius-1;
+                padding: $mg-10 $pd-6 $pd-9 $pd-6;
+                background-color: $color-light-1;
+                h2 {
+                    @include styleText($color-dark-3, $fs-10, $fw-5);
+                    margin-bottom: $pd-8;
+                }
+                .form-group {
+                    position: relative;
+                    border-radius: $bd-radius-2;
+                    border: $bd-1 solid $color-trans-2;
+                    color: $color-dark-2;
+                    transition: all 0.3s;
+                    &:focus-within {
+                        box-shadow: 0 0 4px 0 #0000001a;
+                        border: 1px solid #0000004d;
+                    }
+                    &:last-of-type {
+                        border-radius: $bd-radius-4;
+                    }
+                    i {
+                        position: absolute;
+                        top: $pd-2;
+                        left: $pd-2;
+                    }
+                }
+                .form-control {
+                    color: $color-dark-2;
+                }
+                .course__message {
+                    margin-bottom: $mg-11;
+                    i {
+                        top: $pd-11;
+                    }
+                }
+                input {
+                    padding: $pd-2 $pd-2 $pd-2 $pd-14;
+                    height: $height-7;
+                    font-size: $fs-11;
+                    border: none;
+                    background: transparent;
+                    &:focus {
+                        border: none;
+                        box-shadow: none;
+                    }
+                }
+                select {
+                    @extend input;
+                }
+                textarea {
+                    @extend input;
+                    width: 100%;
+                    height: $height-6;
+                    outline: none;
+                    &:focus {
+                        border: none;
+                        box-shadow: none;
+                    }
+                }
+                button {
+                    width: $width-1;
+                    @include styleText($color-light-1, $fs-11, $fw-4);
+                    height: $height-2;
+                    background-color: $color-dark-2;
+                    border: $bd-1 solid $color-dark-2;
+                    border-radius: $bd-radius-2;
+                    transition: all 0.3s;
+                    &:hover {
+                        @include styleBtnHover($color-dark-2, transparent, $bd-1, $color-dark-2);
+                    }
+                }
+                .course__name {
+                    padding-right: $pd-12;
+                }
+            }
+        }
     }
 }
