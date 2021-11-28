@@ -23,6 +23,8 @@ $fs-8: 15px;
 $fs-9: 13px;
 $fs-10: 2.3rem;
 $fs-11: 0.8em;
+$fs-12: 1rem;
+$fs-13: 3.15rem;
 
 // Font-weight
 $fw-1: 300;
@@ -92,3 +94,15 @@ $bd-radius-1: 10px;
 $bd-radius-2: 50px;
 $bd-radius-3: 50%;
 $bd-radius-4: 20px;
+
+// Break points
+$breakpoints: (
+    "extra-large": 1200px,
+    "large": 992px,
+    "medium": 768px,
+    "small": 576px,
+    "extra-large-down": 1199.98px,
+    "large-down": 991.98px,
+    "medium-down": 767.98px,
+    "small-down": 575.98px,
+);

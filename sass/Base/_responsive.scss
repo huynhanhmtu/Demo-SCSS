@@ -1,0 +1,6 @@
+// Reset max-width .container-xl
+@include mediaQueryMinWidth(large) {
+    .container-xl {
+        max-width: 1200px;
+    }
+}

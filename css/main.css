@@ -30,6 +30,12 @@ body {
   padding: 0;
 }
 
+@media screen and (min-width: 992px) {
+  .container-xl {
+    max-width: 1200px;
+  }
+}
+
 #header {
   font-family: "Montserrat", sans-serif;
   position: absolute;
@@ -38,13 +44,13 @@ body {
   z-index: 2;
 }
 
-#header button, #header #footer input, #footer #header input, #header #footer #course .container .course__right form select, #footer #course .container .course__right form #header select, #header #course .container .course__right form #footer select, #course .container .course__right form #footer #header select, #header #footer #course .container .course__right form textarea, #footer #course .container .course__right form #header textarea, #header #course .container .course__right form #footer textarea, #course .container .course__right form #footer #header textarea {
+#header button, #header #footer input, #footer #header input, #header #footer #course .container-xl .course__right form select, #footer #course .container-xl .course__right form #header select, #header #course .container-xl .course__right form #footer select, #course .container-xl .course__right form #footer #header select, #header #footer #course .container-xl .course__right form textarea, #footer #course .container-xl .course__right form #header textarea, #header #course .container-xl .course__right form #footer textarea, #course .container-xl .course__right form #footer #header textarea {
   font-size: 1.55rem;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
 
-#header button:hover, #header #footer input:hover, #footer #header input:hover, #header #footer #course .container .course__right form select:hover, #footer #course .container .course__right form #header select:hover, #header #course .container .course__right form #footer select:hover, #course .container .course__right form #footer #header select:hover, #header #footer #course .container .course__right form textarea:hover, #footer #course .container .course__right form #header textarea:hover, #header #course .container .course__right form #footer textarea:hover, #course .container .course__right form #footer #header textarea:hover {
+#header button:hover, #header #footer input:hover, #footer #header input:hover, #header #footer #course .container-xl .course__right form select:hover, #footer #course .container-xl .course__right form #header select:hover, #header #course .container-xl .course__right form #footer select:hover, #course .container-xl .course__right form #footer #header select:hover, #header #footer #course .container-xl .course__right form textarea:hover, #footer #course .container-xl .course__right form #header textarea:hover, #header #course .container-xl .course__right form #footer textarea:hover, #course .container-xl .course__right form #footer #header textarea:hover {
   font-size: 1.75rem;
 }
 
@@ -121,6 +127,35 @@ body {
   color: #b61984;
 }
 
+@media screen and (max-width: 1200px) {
+  #header {
+    background: #fff;
+  }
+  #header .header__navbar.d-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  #header .header__navbar.d-flex .navbar-brand {
+    line-height: inherit;
+  }
+  #header .header__navbar.d-flex .header__logo {
+    width: 48px;
+  }
+  #header .header__navbar.d-flex nav button, #header .header__navbar.d-flex nav #footer input, #footer #header .header__navbar.d-flex nav input, #header .header__navbar.d-flex nav #footer #course .container-xl .course__right form select, #footer #course .container-xl .course__right form #header .header__navbar.d-flex nav select, #header .header__navbar.d-flex nav #course .container-xl .course__right form #footer select, #course .container-xl .course__right form #footer #header .header__navbar.d-flex nav select, #header .header__navbar.d-flex nav #footer #course .container-xl .course__right form textarea, #footer #course .container-xl .course__right form #header .header__navbar.d-flex nav textarea, #header .header__navbar.d-flex nav #course .container-xl .course__right form #footer textarea, #course .container-xl .course__right form #footer #header .header__navbar.d-flex nav textarea {
+    padding: 0;
+    margin-right: 0.5em;
+  }
+  #header .header__navbar.d-flex nav button span, #header .header__navbar.d-flex nav #footer input span, #footer #header .header__navbar.d-flex nav input span, #header .header__navbar.d-flex nav #footer #course .container-xl .course__right form select span, #footer #course .container-xl .course__right form #header .header__navbar.d-flex nav select span, #header .header__navbar.d-flex nav #course .container-xl .course__right form #footer select span, #course .container-xl .course__right form #footer #header .header__navbar.d-flex nav select span, #header .header__navbar.d-flex nav #footer #course .container-xl .course__right form textarea span, #footer #course .container-xl .course__right form #header .header__navbar.d-flex nav textarea span, #header .header__navbar.d-flex nav #course .container-xl .course__right form #footer textarea span, #course .container-xl .course__right form #footer #header .header__navbar.d-flex nav textarea span {
+    width: auto;
+    height: auto;
+  }
+}
+
 #portfolio {
   font-family: "Montserrat", sans-serif;
   padding: 60px 0;
@@ -155,28 +190,41 @@ body {
   left: 0;
 }
 
-#portfolio .container {
+#portfolio .container-xl {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-#portfolio .container p {
+#portfolio .container-xl p {
   color: #b61984;
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5em;
 }
 
-#portfolio .container h1 {
+#portfolio .container-xl h1 {
   color: #191919;
   font-size: 3.8rem;
   font-weight: 700;
 }
 
-#portfolio .container img {
-  width: 100%;
+#portfolio .container-xl img {
+  max-width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 1200px) {
+  #portfolio {
+    padding: 120px 0 60px 0;
+  }
+  #portfolio .container-xl p {
+    font-size: 1rem;
+  }
+  #portfolio .container-xl h1 {
+    font-size: 3.15rem;
+    margin-bottom: 40px;
+  }
 }
 
 #info {
@@ -300,16 +348,16 @@ body {
   height: auto;
 }
 
-#course .container {
+#course .container-xl {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
 
-#course .container .course__right {
+#course .container-xl .course__right {
   text-align: left;
 }
 
-#course .container .course__right form {
+#course .container-xl .course__right form {
   -webkit-box-shadow: 0 30px 30px -10px #00000033;
           box-shadow: 0 30px 30px -10px #00000033;
   border-radius: 10px;
@@ -317,14 +365,14 @@ body {
   background-color: #fff;
 }
 
-#course .container .course__right form h2 {
+#course .container-xl .course__right form h2 {
   color: #191919;
   font-size: 2.3rem;
   font-weight: 700;
   margin-bottom: 50px;
 }
 
-#course .container .course__right form .form-group {
+#course .container-xl .course__right form .form-group {
   position: relative;
   border-radius: 50px;
   border: 1px solid #0000001a;
@@ -333,35 +381,35 @@ body {
   transition: all 0.3s;
 }
 
-#course .container .course__right form .form-group:focus-within {
+#course .container-xl .course__right form .form-group:focus-within {
   -webkit-box-shadow: 0 0 4px 0 #0000001a;
           box-shadow: 0 0 4px 0 #0000001a;
   border: 1px solid #0000004d;
 }
 
-#course .container .course__right form .form-group:last-of-type {
+#course .container-xl .course__right form .form-group:last-of-type {
   border-radius: 20px;
 }
 
-#course .container .course__right form .form-group i {
+#course .container-xl .course__right form .form-group i {
   position: absolute;
   top: 1em;
   left: 1em;
 }
 
-#course .container .course__right form .form-control {
+#course .container-xl .course__right form .form-control {
   color: #b61984;
 }
 
-#course .container .course__right form .course__message {
+#course .container-xl .course__right form .course__message {
   margin-bottom: 45px;
 }
 
-#course .container .course__right form .course__message i {
+#course .container-xl .course__right form .course__message i {
   top: 20px;
 }
 
-#course .container .course__right form input, #course .container .course__right form select, #course .container .course__right form textarea {
+#course .container-xl .course__right form input, #course .container-xl .course__right form select, #course .container-xl .course__right form textarea {
   padding: 1em 1em 1em 3.2em;
   height: 3.7em;
   font-size: 0.8em;
@@ -369,25 +417,25 @@ body {
   background: transparent;
 }
 
-#course .container .course__right form input:focus, #course .container .course__right form select:focus, #course .container .course__right form textarea:focus {
+#course .container-xl .course__right form input:focus, #course .container-xl .course__right form select:focus, #course .container-xl .course__right form textarea:focus {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-#course .container .course__right form textarea {
+#course .container-xl .course__right form textarea {
   width: 100%;
   height: 90px;
   outline: none;
 }
 
-#course .container .course__right form textarea:focus {
+#course .container-xl .course__right form textarea:focus {
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-#course .container .course__right form button, #course .container .course__right form #footer input, #footer #course .container .course__right form input, #footer #course .container .course__right form select, #course .container .course__right form #footer select, #footer #course .container .course__right form textarea, #course .container .course__right form #footer textarea {
+#course .container-xl .course__right form button, #course .container-xl .course__right form #footer input, #footer #course .container-xl .course__right form input, #footer #course .container-xl .course__right form select, #course .container-xl .course__right form #footer select, #footer #course .container-xl .course__right form textarea, #course .container-xl .course__right form #footer textarea {
   width: 150px;
   color: #fff;
   font-size: 0.8em;
@@ -396,18 +444,30 @@ body {
   background-color: #b61984;
   border: 1px solid #b61984;
   border-radius: 50px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
 }
 
-#course .container .course__right form button:hover, #course .container .course__right form #footer input:hover, #footer #course .container .course__right form input:hover, #footer #course .container .course__right form select:hover, #course .container .course__right form #footer select:hover, #footer #course .container .course__right form textarea:hover, #course .container .course__right form #footer textarea:hover {
+#course .container-xl .course__right form button:hover, #course .container-xl .course__right form #footer input:hover, #footer #course .container-xl .course__right form input:hover, #footer #course .container-xl .course__right form select:hover, #course .container-xl .course__right form #footer select:hover, #footer #course .container-xl .course__right form textarea:hover, #course .container-xl .course__right form #footer textarea:hover {
   color: #b61984;
   background: transparent;
   border: 1px solid #b61984;
 }
 
-#course .container .course__right form .course__name {
+#course .container-xl .course__right form .course__name {
   padding-right: 15px;
+}
+
+@media screen and (max-width: 992px) {
+  #course .d-flex {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  #course .container-xl .course__right form button, #course .container-xl .course__right form #footer input, #footer #course .container-xl .course__right form input, #footer #course .container-xl .course__right form select, #course .container-xl .course__right form #footer select, #footer #course .container-xl .course__right form textarea, #course .container-xl .course__right form #footer textarea {
+    width: 100%;
+  }
 }
 
 #footer {
@@ -494,7 +554,7 @@ body {
   color: #181818;
 }
 
-#footer button, #footer input, #footer #course .container .course__right form select, #course .container .course__right form #footer select, #footer #course .container .course__right form textarea, #course .container .course__right form #footer textarea {
+#footer button, #footer input, #footer #course .container-xl .course__right form select, #course .container-xl .course__right form #footer select, #footer #course .container-xl .course__right form textarea, #course .container-xl .course__right form #footer textarea {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8em;
   width: 100%;
@@ -506,13 +566,13 @@ body {
   transition: all 0.3s;
 }
 
-#footer button:hover, #footer input:hover, #footer #course .container .course__right form select:hover, #course .container .course__right form #footer select:hover, #footer #course .container .course__right form textarea:hover, #course .container .course__right form #footer textarea:hover {
+#footer button:hover, #footer input:hover, #footer #course .container-xl .course__right form select:hover, #course .container-xl .course__right form #footer select:hover, #footer #course .container-xl .course__right form textarea:hover, #course .container-xl .course__right form #footer textarea:hover {
   color: #fff;
   background: transparent;
   border: 1px solid #fff;
 }
 
-#footer input, #footer #course .container .course__right form select, #course .container .course__right form #footer select, #footer #course .container .course__right form textarea, #course .container .course__right form #footer textarea {
+#footer input, #footer #course .container-xl .course__right form select, #course .container-xl .course__right form #footer select, #footer #course .container-xl .course__right form textarea, #course .container-xl .course__right form #footer textarea {
   font-weight: 400;
   font-family: 'Roboto', sans-serif;
   margin-bottom: 0.7em;
@@ -523,23 +583,23 @@ body {
   transition: border 0.3s;
 }
 
-#footer input::-webkit-input-placeholder, #footer #course .container .course__right form select::-webkit-input-placeholder, #course .container .course__right form #footer select::-webkit-input-placeholder, #footer #course .container .course__right form textarea::-webkit-input-placeholder, #course .container .course__right form #footer textarea::-webkit-input-placeholder {
+#footer input::-webkit-input-placeholder, #footer #course .container-xl .course__right form select::-webkit-input-placeholder, #course .container-xl .course__right form #footer select::-webkit-input-placeholder, #footer #course .container-xl .course__right form textarea::-webkit-input-placeholder, #course .container-xl .course__right form #footer textarea::-webkit-input-placeholder {
   color: #fff;
 }
 
-#footer input:-ms-input-placeholder, #footer #course .container .course__right form select:-ms-input-placeholder, #course .container .course__right form #footer select:-ms-input-placeholder, #footer #course .container .course__right form textarea:-ms-input-placeholder, #course .container .course__right form #footer textarea:-ms-input-placeholder {
+#footer input:-ms-input-placeholder, #footer #course .container-xl .course__right form select:-ms-input-placeholder, #course .container-xl .course__right form #footer select:-ms-input-placeholder, #footer #course .container-xl .course__right form textarea:-ms-input-placeholder, #course .container-xl .course__right form #footer textarea:-ms-input-placeholder {
   color: #fff;
 }
 
-#footer input::-ms-input-placeholder, #footer #course .container .course__right form select::-ms-input-placeholder, #course .container .course__right form #footer select::-ms-input-placeholder, #footer #course .container .course__right form textarea::-ms-input-placeholder, #course .container .course__right form #footer textarea::-ms-input-placeholder {
+#footer input::-ms-input-placeholder, #footer #course .container-xl .course__right form select::-ms-input-placeholder, #course .container-xl .course__right form #footer select::-ms-input-placeholder, #footer #course .container-xl .course__right form textarea::-ms-input-placeholder, #course .container-xl .course__right form #footer textarea::-ms-input-placeholder {
   color: #fff;
 }
 
-#footer input::placeholder, #footer #course .container .course__right form select::placeholder, #course .container .course__right form #footer select::placeholder, #footer #course .container .course__right form textarea::placeholder, #course .container .course__right form #footer textarea::placeholder {
+#footer input::placeholder, #footer #course .container-xl .course__right form select::placeholder, #course .container-xl .course__right form #footer select::placeholder, #footer #course .container-xl .course__right form textarea::placeholder, #course .container-xl .course__right form #footer textarea::placeholder {
   color: #fff;
 }
 
-#footer input:focus, #footer #course .container .course__right form select:focus, #course .container .course__right form #footer select:focus, #footer #course .container .course__right form textarea:focus, #course .container .course__right form #footer textarea:focus {
+#footer input:focus, #footer #course .container-xl .course__right form select:focus, #course .container-xl .course__right form #footer select:focus, #footer #course .container-xl .course__right form textarea:focus, #course .container-xl .course__right form #footer textarea:focus {
   border: 1px solid #fff;
 }
 

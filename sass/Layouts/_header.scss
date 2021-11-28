@@ -66,3 +66,31 @@
         }
     }
 }
+
+// Responsive
+@include mediaQuery(extra-large) {
+    // Header
+    #header {
+        background: $color-light-1;
+        .header__navbar.d-flex {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            .navbar-brand{
+                line-height: inherit;
+            }
+            .header__logo {
+                width: 48px;
+            }
+            nav {
+                button {
+                    padding: 0;
+                    margin-right: $mg-2;
+                    span {
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

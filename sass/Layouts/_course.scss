@@ -14,7 +14,7 @@
             height: auto;
         }
     }
-    .container {
+    .container-xl {
         justify-content: space-around;
         .course__right {
             text-align: left;
@@ -86,13 +86,35 @@
                     background-color: $color-dark-2;
                     border: $bd-1 solid $color-dark-2;
                     border-radius: $bd-radius-2;
-                    transition: all 0.3s;
+                    transition: background 0.3s;
                     &:hover {
                         @include styleBtnHover($color-dark-2, transparent, $bd-1, $color-dark-2);
                     }
                 }
                 .course__name {
                     padding-right: $pd-12;
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+@include mediaQuery(large){
+    #course{
+        .d-flex{
+            display: block!important;
+        }
+    }
+}
+@media screen and (max-width:780px) {
+    #course{
+        .container-xl{
+            .course__right{
+                form{
+                    button{
+                        width: 100%;
+                    }
                 }
             }
         }
